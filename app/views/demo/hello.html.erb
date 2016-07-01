@@ -1,0 +1,21 @@
+<h1>Demo#hello</h1>
+<p>Hello! Find me in app/views/demo/index.html.erb</p>
+
+<% @array.each do |n| %>
+<%= n %>
+<% end %>
+
+<%= link_to('Hello Index', {:action => 'index'}) %>
+
+<%= link_to('Hello Index with parameters', {:action => 'index', :page => 5, :id => 33}) %>
+
+<br>
+id: <%=  params[:id] %>
+<br>
+page: <%=  params[:page] %>
+<br>
+next page: <%= @page.to_i + 1 %>
+
+<hr>
+
+<%= params.inspect %>
